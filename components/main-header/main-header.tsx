@@ -5,6 +5,12 @@ import logo from "@/assets/logo.png";
 import classes from "./main-header.module.css";
 
 import { HeaderBackground } from "../header-background";
+import { HeaderLink } from "..";
+
+const links = [
+  { href: "/meals", text: "Show meals" },
+  { href: "/community", text: "Community" },
+];
 
 const MainHeader = () => {
   return (
@@ -17,12 +23,11 @@ const MainHeader = () => {
         </Link>
         <nav className={classes.nav}>
           <ul>
-            <li>
-              <Link href="/meals">Show meals</Link>
-            </li>
-            <li>
-              <Link href="/community">Community</Link>
-            </li>
+            {links.map(({ href, text }) => (
+              <li key={text}>
+                <HeaderLink href={href}>{text}</HeaderLink>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
