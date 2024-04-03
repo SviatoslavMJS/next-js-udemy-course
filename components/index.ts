@@ -1,3 +1,4 @@
+import { ImageSlideshow } from "./images";
 import MainHeader from "./main-header/main-header";
 
-export { MainHeader };
+export { MainHeader, ImageSlideshow };
