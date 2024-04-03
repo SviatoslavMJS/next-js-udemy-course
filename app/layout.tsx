@@ -1,9 +1,13 @@
-import { PropsWithChildren } from 'react';
-import './globals.css';
+import { PropsWithChildren } from "react";
+import { Inter } from "next/font/google";
+
+import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'NextLevel Food',
-  description: 'Delicious meals, shared by a food-loving community.',
+  title: "NextLevel Food",
+  description: "Delicious meals, shared by a food-loving community.",
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
@@ -16,11 +20,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
               <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop
                   offset="0%"
-                  style={{ stopColor: '#59453c', stopOpacity: '1' }}
+                  style={{ stopColor: "#59453c", stopOpacity: "1" }}
                 />
                 <stop
                   offset="100%"
-                  style={{ stopColor: '#8f3a09', stopOpacity: '1' }}
+                  style={{ stopColor: "#8f3a09", stopOpacity: "1" }}
                 />
               </linearGradient>
             </defs>
