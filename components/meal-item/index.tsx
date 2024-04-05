@@ -14,7 +14,7 @@ export const MealItem = ({
     <article className={styles.meal}>
       <header>
         <div className={styles.image}>
-          <Image src={image} alt={title} fill />
+          <Image src={image} alt={title} sizes="100vh" fill />
         </div>
 
         <div className={styles.headerText}>

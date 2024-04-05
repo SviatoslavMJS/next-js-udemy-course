@@ -1,10 +1,28 @@
 import Image from "next/image";
-import { PropsWithChildren } from "react";
-
+import { Metadata } from "next";
 import { getMeal } from "@/lib/meals";
+import { PropsWithChildren } from "react";
+import { notFound } from "next/navigation";
 
 import styles from "./styles.module.css";
-import { notFound } from "next/navigation";
+
+type Props = {
+  params: { mealSlug: string };
+};
+
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const meal = getMeal(params.mealSlug);
+  if (!meal) {
+    notFound();
+  }
+
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+};
 
 const MealDetails = ({ params }: PropsWithChildren<Record<string, any>>) => {
   const meal = getMeal(params.mealSlug);
