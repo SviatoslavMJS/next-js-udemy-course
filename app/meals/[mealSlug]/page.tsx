@@ -24,7 +24,7 @@ const MealDetails = ({ params }: PropsWithChildren<Record<string, any>>) => {
         <div className={styles.headerText}>
           <h1>{title}</h1>
           <p className={styles.creator}>
-            by<a href={`mailto:${creator_email}`}>{creator}</a>
+            by <a href={`mailto:${creator_email}`}>{creator}</a>
           </p>
           <p className={styles.summary}>{summary}</p>
         </div>

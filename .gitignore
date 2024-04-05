@@ -35,5 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Ignore meals.db file
+# Ignore db file
 meals.db
+/public/images

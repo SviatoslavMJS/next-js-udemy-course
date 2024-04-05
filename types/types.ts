@@ -8,3 +8,7 @@ export interface Meal {
   instructions: string;
   creator_email: string;
 }
+
+export interface MealPayload extends Omit<Meal, "id" | "image"> {
+  image: File;
+}
